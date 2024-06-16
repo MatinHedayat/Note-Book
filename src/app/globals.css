@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: #f0f8ff;
+  background-color: #09090b;
+}
+
+@layer utilities {
+  .auth-title {
+    @apply text-zinc-100 text-3xl font-semibold mb-2;
+  }
+
+  .auth-subtitle {
+    @apply text-zinc-400 text-sm;
+  }
+
+  .title-small {
+    @apply text-[0.8rem] text-zinc-400;
+  }
+
+  .title-medium {
+    @apply text-sm font-medium text-zinc-400;
+  }
+
+  .auth-image {
+    @apply hidden fixed inset-y-0 w-1/2 lg:block;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+
+  .auth-hr {
+    @apply border-zinc-600 mt-8 mb-12;
+  }
+
+  .main-btn {
+    @apply bg-zinc-800 text-zinc-100 text-sm font-medium flex-center rounded transition-all hover:bg-zinc-800/80;
+  }
+
+  .avatar {
+    @apply w-20 h-20 bg-zinc-600 rounded-full flex-center;
+  }
+}
+
+/* ------------------------------------------ */
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  display: grid;
+  border-radius: 50%;
+  -webkit-mask: radial-gradient(farthest-side, #0000 40%, #f0f8ff 41%);
+  background: linear-gradient(0deg, rgba(240, 248, 255, 0.5) 50%, rgba(240, 248, 255, 1) 0)
+      center/1.9px 100%,
+    linear-gradient(90deg, rgba(240, 248, 255, 0.25) 50%, rgba(240, 248, 255, 0.75) 0) center/100%
+      1.9px;
+  background-repeat: no-repeat;
+  animation: spinner-d3o0rx 1.2s infinite steps(12);
+}
+
+.spinner::before,
+.spinner::after {
+  content: '';
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.915;
+  transform: rotate(30deg);
+}
+
+.spinner::after {
+  opacity: 0.83;
+  transform: rotate(60deg);
+}
+
+@keyframes spinner-d3o0rx {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+/* ------------------------------- */
+.dots {
+   width: 7px;
+   height: 7px;
+   border-radius: 50%;
+   color: #f0f8ff;
+   box-shadow: 33.4px 0 0 12.3px, 66.8px 0 0 5.3px, 100.19999999999999px 0 0 0;
+   transform: translateX(-66.8px);
+   animation: dots-ijr34dhg 0.6s infinite alternate linear;
+}
+
+@keyframes dots-ijr34dhg {
+   50% {
+      box-shadow: 33.4px 0 0 5.3px, 66.8px 0 0 12.3px, 100.19999999999999px 0 0 5.3px;
+   }
+
+   100% {
+      box-shadow: 33.4px 0 0 0, 66.8px 0 0 5.3px, 100.19999999999999px 0 0 12.3px;
+   }
+}
