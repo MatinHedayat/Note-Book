@@ -1,3 +1,7 @@
+This is a notepad app, first you need to create an account and then write notes in different categories. This project is under authentication protection, you can work with this program with complete confidence, edit categories as well as notes inside it. You can move notes between categories and also add it to your bookmarks and so more ...
+
+this project is developed by next.js, typescript, tailwindCSS, react-hook-form, shadcn and more. 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
