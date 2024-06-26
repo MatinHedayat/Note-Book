@@ -10,11 +10,12 @@ import {
   sendEmailFormSchema,
   ResetPasswordFormSchema,
   UpdateProfileFormSchema,
-} from '@/schemas';
+} from '@/schema/auth-schema';
 
 import jwt from 'jsonwebtoken';
 import bcryptjs from 'bcryptjs';
 import { Resend } from 'resend';
+import { v4 as uuidv4 } from 'uuid';
 import { cookies } from 'next/headers';
 import { authenticator } from 'otplib';
 import { redirect } from 'next/navigation';
@@ -61,8 +62,8 @@ export async function signUp(payload: SignUpPayload) {
         email,
         password: hashedPassword,
         notes: [
-          { category: 'personal', notes: [] },
-          { category: 'work', notes: [] },
+          { id: uuidv4(), category: 'personal', notes: [] },
+          { id: uuidv4(), category: 'work', notes: [] },
         ],
         bookmarks: [],
       },
@@ -93,6 +94,7 @@ export async function signIn(payload: SignInPayload) {
     data: { email, password },
   } = parsedData;
   let user;
+  console.log(user);
 
   try {
     user = await prisma.user.findUnique({ where: { email } });
