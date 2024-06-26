@@ -8,17 +8,18 @@ datasource db {
 }
 
 type Note {
-  id            DateTime  @default(now())
+  id            String  
   title         String
-  desc          String
+  desc          String?
+  category      String
   isBookmarked  Boolean
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @default(now())
 }
 
 type Category {
-  id         DateTime  @default(now())
-  category  String
+  id         String  
+  category   String
   notes      Note[]
   createdAt  DateTime  @default(now())
   updatedAt  DateTime  @default(now())
@@ -26,8 +27,8 @@ type Category {
 
 model User {
   id         String    @id @default(auto()) @map("_id") @db.ObjectId
-  avatar     String?
-  username   String?   
+  avatar     String
+  username   String   
   email      String    @unique
   password   String
   notes      Category[]
