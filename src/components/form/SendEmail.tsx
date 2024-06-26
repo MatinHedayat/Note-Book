@@ -2,7 +2,7 @@
 
 import BackDrop from '../BackDrop';
 import { sendEmail } from '@/actions/auth';
-import { sendEmailFormSchema } from '@/schemas';
+import { sendEmailFormSchema } from '@/schema/auth-schema';
 
 import { z } from 'zod';
 import Link from 'next/link';

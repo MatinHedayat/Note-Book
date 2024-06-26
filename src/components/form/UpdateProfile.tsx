@@ -4,7 +4,7 @@ import avatars from '@/data/avatars';
 import { useState } from 'react';
 import BackDrop from '../BackDrop';
 import { updateProfile } from '@/actions/auth';
-import { UpdateProfileFormSchema } from '@/schemas';
+import { UpdateProfileFormSchema } from '@/schema/auth-schema';
 
 import { z } from 'zod';
 import Link from 'next/link';

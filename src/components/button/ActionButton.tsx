@@ -9,7 +9,7 @@ import Modal from '../Modal';
 type ActionButtonProps = {
   text: string;
   className?: string;
-  action: () => Promise<void> | Promise<ToastInfoProp>;
+  action: () => any;
   actionType?: string;
 } & ModalTypes;
 
@@ -69,6 +69,13 @@ function toastInfoMaker(actionType: string) {
         desc: deleteAccountToastInfo.desc,
       };
       break;
+
+      case 'delete-notes':
+        toastInfo = {
+          message: 'you have successfully deleted all categories and notes',
+          desc: '',
+        };
+        break;
 
     default:
       break;

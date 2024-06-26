@@ -2,7 +2,7 @@
 
 import BackDrop from '../BackDrop';
 import { resetPassword } from '@/actions/auth';
-import { ResetPasswordFormSchema } from '@/schemas';
+import { ResetPasswordFormSchema } from '@/schema/auth-schema';
 import SubmitButton from '../button/SubmitButton';
 
 import { z } from 'zod';

@@ -2,7 +2,7 @@
 
 import BackDrop from '../BackDrop';
 import { signUp } from '@/actions/auth';
-import { signUpFormSchema } from '@/schemas';
+import { signUpFormSchema } from '@/schema/auth-schema';
 
 import { z } from 'zod';
 import Link from 'next/link';

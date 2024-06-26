@@ -2,7 +2,7 @@
 
 import BackDrop from '../BackDrop';
 import { signIn } from '@/actions/auth';
-import { signInFormSchema } from '@/schemas';
+import { signInFormSchema } from '@/schema/auth-schema';
 import { loginToastInfo } from '@/data/toastInfo';
 
 import { z } from 'zod';

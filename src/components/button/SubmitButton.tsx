@@ -1,8 +1,15 @@
 import { Button } from '../ui/button';
 
-export default function SubmitButton({ isSubmitting, text }: { isSubmitting: boolean, text: string }) {
+type SubmitButtonProps = {
+  text: string;
+  isSubmitting: boolean;
+  className?: string;
+  isDisabled?: boolean
+};
+
+export default function SubmitButton({ isSubmitting, text, className, isDisabled }: SubmitButtonProps) {
   return (
-    <Button type='submit' className='w-4/6'>
+    <Button type='submit' className={`w-4/6 ${className}`} disabled={isDisabled}>
       <div className='flex-center gap-x-3'>
         <p
           className={`transition-all ${
