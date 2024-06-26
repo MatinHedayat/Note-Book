@@ -6,6 +6,7 @@ import { getUserInfo, getUserNotesInfo } from '@/utils/getUserDetail';
 import Link from 'next/link';
 import Image from 'next/image';
 import { MdOutlineArrowBack } from 'react-icons/md';
+import { RemoveAllCategories } from '@/actions/category';
 
 export default async function Profile() {
   const user = await getUser();
@@ -94,13 +95,13 @@ export default async function Profile() {
           />
 
           <ActionButton
-            text='Delete All Notes'
+            text='Delete All Categories'
             className='main-btn w-1/2'
-            action={deleteAccount}
+            action={RemoveAllCategories}
             actionType={'delete-notes'}
             modal
-            modalTitle='Are you sure you want to delete all your notes ?'
-            modalDesc='This action is irreversible, please do this with full confidence.'
+            modalTitle='Are you sure you want to delete all your categories ?'
+            modalDesc='This action is irreversible, please do this with full confidence. All your notes will be deleted as well.'
           />
         </div>
       </div>
