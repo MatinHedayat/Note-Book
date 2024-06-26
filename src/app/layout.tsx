@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
+import FiltersProvider from '@/contexts/Filters';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,7 +20,9 @@ export default function RootLayout({
     <html lang='en'>
       <body className={inter.className}>
         <Toaster />
-        <section className='max-w-[1200px] mx-auto'>{children}</section>
+        <section className='max-w-[1000px] mx-auto'>
+          <FiltersProvider>{children}</FiltersProvider>
+        </section>
       </body>
     </html>
   );
