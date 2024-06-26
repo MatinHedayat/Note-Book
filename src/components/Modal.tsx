@@ -3,7 +3,8 @@
 import { FiAlertOctagon } from 'react-icons/fi';
 
 type ModalProps = {
-  modalText: string;
+  modalText?: string;
+  textIcon?: any;
   modalTitle?: string;
   modalDesc?: string;
   className?: string;
@@ -24,11 +25,13 @@ import {
 import { IoClose } from 'react-icons/io5';
 
 export default function Modal(props: ModalProps) {
-  const { modalText, modalTitle, modalDesc, className, action } = props;
+  const { modalText,textIcon, modalTitle, modalDesc, className, action } = props;
 
   return (
     <AlertDialog>
-      <AlertDialogTrigger className={className}>{modalText}</AlertDialogTrigger>
+      <AlertDialogTrigger className={className}>
+        {textIcon && textIcon}
+        {modalText}</AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
           <div className='flex items-center justify-between mb-4'>
