@@ -9,7 +9,9 @@ export default async function getUser() {
 
   const decodedToken: any = jwt.verify(authAccessCookie?.value, process.env.TOKEN_KEY!);
 
-  return await prisma.user.findUnique({ where: { id: decodedToken.userId } });
+  try {
+    return await prisma.user.findUnique({ where: { id: decodedToken.userId } });
+  } catch (error) {
+    throw new Error('Failed status while finding user information');
+  }
 }
-
-

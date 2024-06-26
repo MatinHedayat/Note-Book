@@ -38,6 +38,40 @@ const deleteAccountToastInfo = {
   desc: 'Redirecting you to sign-up page ...',
 };
 
+const addNoteToastInfo = {
+  message: 'You have successfully added the note',
+  desc: 'Redirecting you to home page ...',
+};
+
+const renameCategoryToastInfo = {
+  message: 'You have successfully renamed the category',
+};
+
+const deleteNotesToastInfo = {
+  message: 'You have successfully deleted all notes in this category',
+};
+
+const addCategoryToastInfo = {
+  message: 'You have successfully added this category',
+};
+
+const deleteCategoryToastInfo = {
+  message: 'You have successfully deleted this category',
+};
+
+const deleteNoteToastInfo = {
+  message: 'You have successfully deleted this note',
+};
+
+const updateNoteToastInfo = {
+  message: 'You have successfully updated this note',
+};
+
+const editNoteToastInfo = {
+  message: 'You have successfully updated the note',
+  desc: 'Redirecting you to home page ...',
+};
+
 export {
   signUpToastInfo,
   loginToastInfo,
@@ -46,4 +80,12 @@ export {
   updateProfileToastInfo,
   logoutToastInfo,
   deleteAccountToastInfo,
+  addNoteToastInfo,
+  renameCategoryToastInfo,
+  deleteNotesToastInfo,
+  deleteCategoryToastInfo,
+  deleteNoteToastInfo,
+  updateNoteToastInfo,
+  editNoteToastInfo,
+  addCategoryToastInfo,
 };
